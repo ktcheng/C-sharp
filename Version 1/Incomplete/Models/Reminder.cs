@@ -20,5 +20,4 @@ namespace Reminders.Models
         public int ReminderNotification { get; set; }
         public DateTime NotificationTime { get; set; }
     }
-
 }
