@@ -1,6 +1,6 @@
 # CompleteList
-
 To whom this may concern,
+
 This repository is filled with two versions of a short UWP (Universal Windows Platform) C# application, designed for the Windows 10 operating system, that I have personally dubbed "Complete List". Designed in a style similar to that of a reminders or todo app, one version documents my first [and incomplete] attempt at a solution, while the second version will be absolute. Both versions will contain the necessary and corresponding C# and XAML code that is required for the application to run.
 
 This repository exists to showcase my personal undertaking of a "personal developmental project" in the fields of C#, and also XAML, programming. My motivation behind this undertaking was to satisfy my own interests and curiosities in C# and learn more about C#, XAML, and the UWP framework. Throughout this [current and ongoing] experience, I have learned much more about C# and XAML, and I believe I have gained invaluable exposure to the UWP framework and also to the process of developing C# applications. I intend to use this experience as a springboard to learn even more, and thus become a better programmer in the future.
