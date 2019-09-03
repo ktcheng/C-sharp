@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<toast launch="app-defined-string">
+
+  <visual>
+    <binding template="ToastGeneric">
+    </binding>
+  </visual>
+
+
+</toast>
