@@ -27,15 +27,16 @@ namespace Reminders
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    
     public sealed partial class MainPage : Page
     {
         //public ObservableCollection<Reminder> Reminders;
 
         private ObservableCollection<Reminder> Reminders { get; set; } = new ObservableCollection<Reminder>();
+        
         public MainPage()
         {
             //Reminders = new ObservableCollection<Reminder>();
-
             this.InitializeComponent();
         }
 
@@ -49,8 +50,6 @@ namespace Reminders
             base.OnNavigatedTo(e);
 
             var displayReminders = e.Parameter as Reminder;
-
-            
 
             if (displayReminders != null)
             {
@@ -66,8 +65,6 @@ namespace Reminders
                     }
                 }
             }
-
-
         }
 
         private void DeleteReminderButton_Click(object sender, RoutedEventArgs e)
@@ -105,7 +102,6 @@ namespace Reminders
                 {
                     this.Frame.Navigate(typeof(BlankPage1), selectedItem);
                 }
-
                 //Reminders.Remove(RemindersListView.SelectedItem);
             }
         }
