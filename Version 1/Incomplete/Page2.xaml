@@ -42,7 +42,6 @@
         </CommandBar>
 
         <StackPanel Grid.Column="1">
-
             <TextBox Name="LinkBox"
                      PlaceholderText="Links"
                      FontSize="20"
@@ -75,8 +74,6 @@
                     <ComboBoxItem Content="5 Hours Before"/>
                 </ComboBox>
             </StackPanel>
-
-
 
             <StackPanel>
                 <TextBlock Text="Choose days: "
@@ -125,7 +122,6 @@
                               VerticalAlignment="Center"/>
                 </StackPanel>
             </StackPanel> 
-
         </StackPanel>
 
         <StackPanel>
@@ -198,7 +194,6 @@
                             HorizontalAlignment="Left"
                             VerticalAlignment="Center"/>
             </StackPanel>
-
 
             <TextBox Name="NotesBox"
                      PlaceholderText="Notes"
