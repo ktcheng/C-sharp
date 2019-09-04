@@ -30,6 +30,7 @@ namespace Reminders
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
+        
         public ObservableCollection<Reminder> ReminderList { get; set; } = new ObservableCollection<Reminder>();
         public App()
         {
@@ -42,14 +43,14 @@ namespace Reminders
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
+        
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
 
-
-
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
+            
             if (rootFrame == null)
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
@@ -85,6 +86,7 @@ namespace Reminders
         /// </summary>
         /// <param name="sender">The Frame which failed navigation</param>
         /// <param name="e">Details about the navigation failure</param>
+        
         void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
         {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
