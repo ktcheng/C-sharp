@@ -16,7 +16,6 @@ using Windows.UI.Xaml.Navigation;
 using Reminders.Models;
 using Microsoft.Toolkit.Uwp.Notifications;
 
-
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Reminders
@@ -24,16 +23,19 @@ namespace Reminders
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    
     public sealed partial class BlankPage2 : Page
     {
         public BlankPage2()
         {
             this.InitializeComponent();
         }
+        
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage), null);
         }
+        
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             if (Frame.CanGoBack)
@@ -41,6 +43,7 @@ namespace Reminders
                 Frame.GoBack();
             }
         }
+        
         private void ClearAll_Click(object sender, RoutedEventArgs e)
         {
             LinkBox.Text = "";
@@ -48,6 +51,7 @@ namespace Reminders
             LocationBox.Text = "";
             EmailBox.Text = "";
             NotesBox.Text = "";
+            
             ReminderDatePickerStart.Date = DateTime.Now;
             ReminderDatePickerEnd.Date = DateTime.Now;
             ReminderTimePicker.Time = TimeSpan.Zero;
@@ -131,6 +135,7 @@ namespace Reminders
 
             var reminderTimeHours = ReminderTimePicker.Time.Hours;
             var reminderTimeMinutes = ReminderTimePicker.Time.Minutes;
+            
             string amPm;
             string formattedHours;
             string formattedMinutes;
