@@ -28,6 +28,7 @@ namespace Reminders
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    
     public sealed partial class BlankPage1 : Page
     {
         public BlankPage1()
@@ -51,7 +52,6 @@ namespace Reminders
             }
         }
 
-
         private void SaveChanges_Click(object sender, RoutedEventArgs e)
         {
             var parameter1 = new Reminder();
@@ -64,7 +64,6 @@ namespace Reminders
             {
                 parameter1.ReminderName = ReminderNameBox.Text;
             }
-
 
             if (String.IsNullOrWhiteSpace(LocationBox.Text))
             {
@@ -167,9 +166,8 @@ namespace Reminders
             }
 
             parameter1.ReminderTime = timeString;
-
+            
             int reminderComboBox;
-
             if (NotificationComboBox.SelectedValue != null)
             {
                 switch (NotificationComboBox.SelectedValue.ToString())
@@ -204,7 +202,6 @@ namespace Reminders
 
             parameter1.ReminderNotification = reminderComboBox;
 
-
             ToastVisual visual = new ToastVisual()
             {
                 BindingGeneric = new ToastBindingGeneric()
@@ -226,10 +223,12 @@ namespace Reminders
                     }
                 }
             };
+            
             ToastContent toastContent = new ToastContent()
             {
                 Visual = visual
             };
+            
             var toast = new ToastNotification(toastContent.GetXml());
 
             //ToastNotificationManager.CreateToastNotifier().Show(toast);
@@ -268,7 +267,6 @@ namespace Reminders
             //var toast = new ScheduledToastNotification(toastContent.GetXml(), ReminderDatePicker.Date.Value.DateTime);
             //ToastNotificationManager.CreateToastNotifier().AddToSchedule(toast);
 
-
             this.Frame.Navigate(typeof(MainPage), parameter1);
         }
 
@@ -276,10 +274,12 @@ namespace Reminders
         {
             this.Frame.Navigate(typeof(MainPage), null);
         }
+        
         private void Recurring_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(BlankPage2), null);
         }
+        
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             if (Frame.CanGoBack)
@@ -287,6 +287,7 @@ namespace Reminders
                 Frame.GoBack();
             }
         }
+        
         private void Create_Click(object sender, RoutedEventArgs e)
         {
             var parameter1 = new Reminder();
@@ -299,7 +300,6 @@ namespace Reminders
             {
                 parameter1.ReminderName = ReminderNameBox.Text;
             }
-            
 
             if (String.IsNullOrWhiteSpace(LocationBox.Text))
             {
@@ -396,9 +396,7 @@ namespace Reminders
             }
 
             parameter1.ReminderTime = timeString; 
-
-            
-            
+           
             this.Frame.Navigate(typeof(MainPage), parameter1);
         }
 
