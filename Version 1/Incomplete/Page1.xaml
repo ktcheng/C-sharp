@@ -47,7 +47,6 @@
         </CommandBar>
 
         <StackPanel Grid.Column="1">
-
             <TextBox x:Name="LinkBox"
                      PlaceholderText="Links"
                      FontSize="20"
@@ -128,7 +127,6 @@
                             HorizontalAlignment="Left"
                             VerticalAlignment="Center"/>
             </StackPanel>
-            
             
             <TextBox Name="NotesBox"
                      PlaceholderText="Notes"
