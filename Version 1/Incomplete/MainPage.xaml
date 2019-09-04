@@ -1,0 +1,113 @@
+﻿<Page
+    x:Class="Reminders.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Reminders"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:Reminders.Models"
+    mc:Ignorable="d"
+    NavigationCacheMode="Required"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Name="MainPageGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.Background>
+            <SolidColorBrush Color="Azure"/>
+        </Grid.Background>
+
+        <CommandBar>
+            <AppBarButton Icon="Add"
+                          Label="Add"
+                          ClickMode="Press"
+                          Click="AddNew_Click"/>
+            <AppBarButton Icon="Edit"
+                          Label="Edit"
+                          ClickMode="Press"
+                          Click="Edit_Click"/>
+            <AppBarButton Icon="SelectAll"
+                          Label="Select All"
+                          ClickMode="Press"
+                          Click="SelectAllButton_Click"/>
+            <AppBarButton Icon="Delete"
+                          Label="Delete"
+                          ClickMode="Press"
+                          Click="DeleteReminderButton_Click"/>
+        </CommandBar>
+
+        <StackPanel Name="TitleStackPanel"
+                    Grid.Row="0">
+            <TextBlock Name="TitleTextBlock"
+                       Text="Reminders"
+                       FontSize="100"
+                       Foreground="LightSkyBlue"
+                       Margin="0,60,0,0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <ListView Name="RemindersListView"
+                  Grid.Row="1"
+                  HorizontalAlignment="Center"
+                  SelectionMode="Multiple"
+                  ItemsSource="{x:Bind Reminders, Mode=OneTime}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="data:Reminder">
+                    <StackPanel Name="LVStackPanel">
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+                            <TextBlock Name="ReminderTitleTextBlock"
+                                       Text="{x:Bind ReminderName}"
+                                       FontSize="30"
+                                       Foreground="LightSkyBlue"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                        
+                        <StackPanel Name="MiniStackPanel1" Orientation="Horizontal">
+                            <TextBlock Text="{x:Bind LocationName}"/>
+                            <TextBlock Text="  |  "
+                                       FontSize="12"
+                                       Foreground="Black"
+                                       Margin="0,0,12,0"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                            <TextBlock Text="{x:Bind EmailName}"/>
+                            <TextBlock Text="  |  "
+                                       FontSize="12"
+                                       Foreground="Black"
+                                       Margin="0,0,12,0"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                            <TextBlock Text="{x:Bind ReminderNotes}"/>
+                            <TextBlock Text="  |  "
+                                       FontSize="12"
+                                       Foreground="Black"
+                                       Margin="0,0,12,0"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                            <TextBlock Text="{x:Bind ReminderLinks}"/>
+                        </StackPanel>
+
+                        <StackPanel Name="MiniStackPanel2" Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+                            <TextBlock Text="{x:Bind ReminderDate}"/>
+                            <TextBlock Text="  |  "
+                                       FontSize="12"
+                                       Foreground="Black"
+                                       Margin="0,0,12,0"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                            <TextBlock Text="{x:Bind ReminderTime}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+</Page>

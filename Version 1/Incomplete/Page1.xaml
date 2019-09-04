@@ -1,0 +1,146 @@
+﻿<Page
+    x:Class="Reminders.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Reminders"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.Background>
+            <SolidColorBrush Color="Azure"/>
+        </Grid.Background>
+
+        <CommandBar Grid.ColumnSpan="2"
+                    DefaultLabelPosition="Right">
+            <AppBarButton Icon="Add"
+                          Label="Create"
+                          ClickMode="Press"
+                          Click="Create_Click"/>
+            <!--<AppBarButton Icon="RepeatOne"
+                          Label="Recurring"
+                          ClickMode="Press"
+                          Click="Recurring_Click"/> -->
+            <AppBarButton Icon="Save"
+                          Label="Save Changes"
+                          ClickMode="Press"
+                          Click="SaveChanges_Click"/>
+            <AppBarButton Icon="Delete"
+                          Label="Clear All"
+                          ClickMode="Press"
+                          Click="ClearAll_Click"/>
+            <AppBarButton Icon="Back"
+                          Label="Back"
+                          ClickMode="Press"
+                          Click="Back_Click"/>
+            <AppBarButton Icon="Cancel"
+                          Label="Close"
+                          ClickMode="Press"
+                          Click="Cancel_Click"/>
+        </CommandBar>
+
+        <StackPanel Grid.Column="1">
+
+            <TextBox x:Name="LinkBox"
+                     PlaceholderText="Links"
+                     FontSize="20"
+                     TextWrapping="Wrap"
+                     Foreground="Black"
+                     Margin="12,60,0,12"
+                     Height="272"
+                     Width="464"
+                     MaxWidth="476"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"/>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Send Reminder:"
+                           FontSize="20"
+                           Foreground="Black"
+                           Margin="12,0,0,0"
+                           Width="Auto"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top"/>
+
+                <ComboBox Name="NotificationComboBox"
+                          Margin="12,0,0,12"
+                          Width="292">
+                    <ComboBoxItem Content="5 Minutes Before"/>
+                    <ComboBoxItem Content="10 Minutes Before"/>
+                    <ComboBoxItem Content="15 Minutes Before"/>
+                    <ComboBoxItem Content="30 Minutes Before"/>
+                    <ComboBoxItem Content="1 Hour Before"/>
+                    <ComboBoxItem Content="5 Hours Before"/>
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel>
+            <TextBox Name="ReminderNameBox"
+                     PlaceholderText="Reminder" 
+                     FontSize="100" 
+                     Foreground="Black" 
+                     Margin="24,60,0,0"
+                     Width="964"
+                     MaxWidth="976"
+                     HorizontalAlignment="Left" 
+                     VerticalAlignment="Center"/>
+            <TextBox Name="LocationBox"
+                     PlaceholderText="Location"
+                     FontSize="20"
+                     Foreground="Black"
+                     Margin="24,4,0,0"
+                     Width="964"
+                     MaxWidth="976"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Center"/>
+            <TextBox Name="EmailBox"
+                     PlaceholderText="Email"
+                     FontSize="20"
+                     Foreground="Black"
+                     Margin="24,4,0,0"
+                     Width="964"
+                     MaxWidth="976"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Center"/>
+
+            <StackPanel Orientation="Horizontal">
+                <CalendarDatePicker Name="ReminderDatePicker"
+                                    PlaceholderText="Select Date"
+                                    FontSize="20"
+                                    Margin="24,4,0,0"
+                                    Width="488"
+                                    MaxWidth="488"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"/>
+                <TimePicker Name="ReminderTimePicker"
+                            FontSize="16"
+                            Margin="4,4,0,0"
+                            Width="488"
+                            MaxWidth="488"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"/>
+            </StackPanel>
+            
+            
+            <TextBox Name="NotesBox"
+                     PlaceholderText="Notes"
+                     FontSize="20"
+                     TextWrapping="Wrap"
+                     Foreground="Black"
+                     Margin="24,4,0,0"
+                     Width="964"
+                     Height="500"
+                     MaxWidth="976"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Page>
