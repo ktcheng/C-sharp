@@ -62,7 +62,6 @@ namespace CompleteList
                 }
                 catch
                 {
-
                 }
             }
             else if (onStart)
@@ -81,7 +80,6 @@ namespace CompleteList
                 }
                 catch
                 {
-
                 }
             }
         }
@@ -517,21 +515,19 @@ namespace CompleteList
                     }
                     else
                     {
-                        //var current = DateTime.Now;
-                        //var daysCounter = CLTimePicker.Time.Days - DateTime.Now.Day;
-                        //var minutesCounter = CLTimePicker.Time.Minutes - DateTime.Now.Minute;
-                        //var hoursCounter = CLTimePicker.Time.Hours - DateTime.Now.Hour;
+                        var current = DateTime.Now;
+                        var daysCounter = CLTimePicker.Time.Days - DateTime.Now.Day;
+                        var minutesCounter = CLTimePicker.Time.Minutes - DateTime.Now.Minute;
+                        var hoursCounter = CLTimePicker.Time.Hours - DateTime.Now.Hour;
 
-                        //int intDays = Convert.ToInt32(daysCounter);
-                        //int intMinutes = Convert.ToInt32(minutesCounter);
-                        //int intHours = Convert.ToInt32(hoursCounter);
-                        //TimeSpan timeSpan = new TimeSpan(intDays, intHours, intMinutes, 0);
+                        int intDays = Convert.ToInt32(daysCounter);
+                        int intMinutes = Convert.ToInt32(minutesCounter);
+                        int intHours = Convert.ToInt32(hoursCounter);
+                        TimeSpan timeSpan = new TimeSpan(intDays, intHours, intMinutes, 0);
 
-                        //DateTimeOffset scheduledTime = current + timeSpan;
-                        //var toast1 = new ScheduledToastNotification(toastContent.GetXml(), scheduledTime);
-                        //ToastNotificationManager.CreateToastNotifier().AddToSchedule(toast1);
-
-                        //Timespan cannot take anything greater than 24 hours, so it throws exception
+                        DateTimeOffset scheduledTime = current + timeSpan;
+                        var toast1 = new ScheduledToastNotification(toastContent.GetXml(), scheduledTime);
+                        ToastNotificationManager.CreateToastNotifier().AddToSchedule(toast1);
                     }
                 }
                 RemindersList.Add(reminder);
