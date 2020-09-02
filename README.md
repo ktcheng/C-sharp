@@ -7,5 +7,5 @@ Within is a collection of two versions of my personal attempt at a reminders-sty
 Despite the discontinuation, I have chosen to leave this project as an example of what I have learned about programming in C# and XAML, as well as navigating the UWP framework. My experiences have given a lot of insight on how Windows apps are developed in the UWP framework.
 
 Projects:
-- Version 1: CompleteList Version 1 (Prototype UWP Reminders Application)
-- Version 2: CompleteList Version 2 (More Successful UWP Reminders Application)
+- Version 1: Complete List Version 1 (Prototype UWP Reminders Application)
+- Version 2: Complete List Version 2 (More Successful UWP Reminders Application)
