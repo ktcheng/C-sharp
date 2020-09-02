@@ -1,7 +1,10 @@
-# C#
-This is a collection of various programming projects/practice files utilizing C#. Each folder is devoted to an entire project. Unless otherwise stated, all of my programs are proprietary and of my own work. 
+# Complete List
+N.B. This project is discontinued.
 
-This repository exists to showcase my various programming projects and work with C#, as well as to display what I have learned and what I have written. 
+# Description
+Within is a collection of two versions of my personal attempt at a reminders-style application using both C# and the XAML markup language within the UWP (Universal Windows Platform) framework. The code entails both the application UI as well as simple button functionality, working with various sections of the UWP framework, the most difficult of which was toast content (to enable notifications to the system and base device). 
+
+Despite the discontinuation, I have chosen to leave this project as an example of what I have learned about programming in C# and XAML, as well as navigating the UWP framework. My experiences have given a lot of insight on how Windows apps are developed in the UWP framework.
 
 Projects:
 - Version 1: CompleteList Version 1 (Prototype UWP Reminders Application)
